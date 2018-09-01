@@ -1,0 +1,27 @@
+<%= form_with(model: upz, local: true) do |form| %>
+  <% if upz.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(upz.errors.count, "error") %> prohibited this upz from being saved:</h2>
+
+      <ul>
+      <% upz.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :upz_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district_area_id %>
+    <%= form.text_field :district_area_id, id: :upz_district_area_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

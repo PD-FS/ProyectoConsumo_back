@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @district_area.name %>
+</p>
+
+<p>
+  <strong>Initialzipcode:</strong>
+  <%= @district_area.initialZipCode %>
+</p>
+
+<p>
+  <strong>Lastzipcode:</strong>
+  <%= @district_area.lastZipCode %>
+</p>
+
+<p>
+  <strong>Surfacearea:</strong>
+  <%= @district_area.surfaceArea %>
+</p>
+
+<p>
+  <strong>Population:</strong>
+  <%= @district_area.population %>
+</p>
+
+<p>
+  <strong>Density:</strong>
+  <%= @district_area.density %>
+</p>
+
+<%= link_to 'Edit', edit_district_area_path(@district_area) %> |
+<%= link_to 'Back', district_areas_path %>
